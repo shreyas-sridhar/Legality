@@ -20,8 +20,11 @@ Before you begin, ensure you have the following installed on your machine:
    git clone https://github.com/shreyas-sridhar/Legality.git
    cd Legality
    ```
-
-2. **Install the required packages** using pip:
+2. ** Install all required libraries:
+```bash
+pip install -r requirements.txt
+```
+3. **Install the required packages** using pip:
    ```bash
    pip install Flask requests oauthlib python-dotenv
    ```
