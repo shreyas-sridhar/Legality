@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Help | AI-Powered Legal Consultation</title>
+    <style>
+        :root {
+            --primary-dark: #000000;
+            --secondary-dark: #1c1c1e;
+            --accent-color: #0a84ff;
+            --text-primary: #ffffff;
+            --text-secondary: #86868b;
+            --card-background: #2c2c2e;
+            --input-background: #3a3a3c;
+            --success-color: #30d158;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            background: var(--secondary-dark);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1.5rem 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            background: linear-gradient(90deg, #fff 0%, #86868b 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .consultation-card,
+        .response-card {
+            background: var(--card-background);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            margin-bottom: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--input-background);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>AI-Powered Legal Help</h1>
+        <p>Get expert legal guidance for your needs.</p>
+    </header>
+
+
+    <main class="container">
+        <!-- Legal Consultation Widget -->
+        <div class="consultation-card">
+            <div class="iframe-container">
+                <iframe src="https://app.gpt-trainer.com/widget/03c61bb771b14dcd94c774c90b2675a4"
+                    allow="clipboard-read; clipboard-write" title="Legal Consultation Widget"></iframe>
+            </div>
+        </div>
+
+        <!-- Response Section -->
+        <div class="response-card">
+            <h2>Consultation Response</h2>
+            <p><strong>Reference:</strong> {{ legal_help.reference_number }}</p>
+            <p><strong>Timestamp:</strong> {{ legal_help.timestamp }}</p>
+            <p>{{ legal_help.response }}</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; {{ year }} AI-Powered Legal Consultation Services. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

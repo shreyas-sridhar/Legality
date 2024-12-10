@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AI-Powered Legal Consultation">
+    <title>Legal Advisor | AI-Powered Legal Consultation</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /* Fonts and Colors */
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --primary-color: #2A7AFC;
+    --secondary-color: #0A0A0A;
+    --light-color: #F4F4F4;
+    --dark-color: #1E1E1E;
+    --accent-color: #30D158;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background: var(--light-color);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: var(--primary-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 3rem 1rem;
+    position: relative;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-links .btn {
+    color: var(--light-color);
+    background: var(--dark-color);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.nav-links .btn:hover {
+    background: var(--accent-color);
+    color: var(--dark-color);
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: var(--dark-color);
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+/* Main Sections */
+main {
+    padding: 2rem 1rem;
+}
+
+.consultation-section,
+.response-section {
+    margin-bottom: 3rem;
+}
+
+.consultation-section h2,
+.response-section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.consultation-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.iframe-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--dark-color);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.response-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background: var(--dark-color);
+    color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+</style>
+<body>
+    <header>
+        <div class="nav-bar">
+            <h1 class="logo">Legal<span>Advisor</span></h1>
+            <div class="nav-links">
+                {% if session['user'] %}
+                <div class="user-profile">
+                    <img src="{{ session['user']['picture'] }}" alt="Profile" class="profile-pic">
+                    <span class="user-name">Hello, {{ session['user']['name'] }}</span>
+                    <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+                </div>
+                {% else %}
+                <a href="{{ url_for('login') }}" class="btn">Login with Google</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="hero-section">
+            <h2>Your Trusted Legal Partner</h2>
+            <p>Access expert legal guidance anytime, anywhere.</p>
+            <a href="#consultation" class="btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="consultation" class="consultation-section">
+            <h2>Legal Consultation</h2>
+            <div class="consultation-card">
+                <div class="iframe-container">
+                    <iframe src="https://app.gpt-trainer.com/widget/03c61bb771b14dcd94c774c90b2675a4"
+                        allow="clipboard-read; clipboard-write" title="Legal Consultation Widget"></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; {{ year }} Legal Advisor. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
