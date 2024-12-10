@@ -17,8 +17,8 @@ Before you begin, ensure you have the following installed on your machine:
 ## Installation
 1. **Clone the repository** to your local machine:
    ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+   git clone https://github.com/shreyas-sridhar/Legality.git
+   cd Legality
    ```
 
 2. **Install the required packages** using pip:
