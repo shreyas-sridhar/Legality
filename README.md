@@ -1,5 +1,5 @@
 # Legality
-Welcome to the Legal Help Application! This project is a web application built using Flask that allows users to log in using their Google account and access legal consultation information. This README will guide you through the setup and usage of the application, even if you're a novice programmer.
+Welcome to the Legal Help Application! This project is a web application built using Flask that allows users to log in using their Google account and access legal consultation information. This README will guide you through the setup and usage of the application, even if you're a novice programmer. (My 5th sem Special topic project built in collab with my team)
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
@@ -68,3 +68,7 @@ The application will start on `https://localhost:5000`.
 
 ## Video Tutorial
 If you need assistance setting up your Google OAuth credentials, please watch this helpful video: [Setting Up Google OAuth Credentials](https://youtu.be/tgO_ADSvY1I?si=3BgENI3S0g6tjwjc).
+This is how i learnt and be vigilant to hide your `CLIENT_ID` and `CLIENT_SECRET` while pushing your code to Github or anywhere public
+
+##License 
+Fell free to fork this code and do as you wish
