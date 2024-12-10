@@ -70,5 +70,5 @@ The application will start on `https://localhost:5000`.
 If you need assistance setting up your Google OAuth credentials, please watch this helpful video: [Setting Up Google OAuth Credentials](https://youtu.be/tgO_ADSvY1I?si=3BgENI3S0g6tjwjc).
 This is how i learnt and be vigilant to hide your `CLIENT_ID` and `CLIENT_SECRET` while pushing your code to Github or anywhere public
 
-##License 
+## License 
 Fell free to fork this code and do as you wish
