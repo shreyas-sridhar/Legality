@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, url_for, redirect, session
-# from flask_login import LoginManager, login_user, logout_user, login_required, current_user
 from oauthlib.oauth2 import WebApplicationClient
 import os
 import requests
