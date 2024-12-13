@@ -19,9 +19,9 @@ Plain old Python and pip to install libraries is all you need
    cd Legality
    ```
 2. ** Install all required libraries:
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 3. **Install the required packages** using pip:
    ```bash
    pip install Flask requests oauthlib python-dotenv
