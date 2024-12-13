@@ -18,7 +18,7 @@ Plain old Python and pip to install libraries is all you need
    git clone https://github.com/shreyas-sridhar/Legality.git
    cd Legality
    ```
-2. ** Install all required libraries:
+2. **Install all required libraries:
    ```bash
    pip install -r requirements.txt
    ```
