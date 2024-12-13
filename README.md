@@ -10,9 +10,7 @@ Welcome to the Legal Help Application! This project is a web application built u
 - [Video Tutorial](#video-tutorial)
 
 ## Prerequisites
-Before you begin, ensure you have the following installed on your machine:
-- Python 3.x
-- pip (Python package installer)
+Plain old Python and pip to install libraries is all you need
 
 ## Installation
 1. **Clone the repository** to your local machine:
